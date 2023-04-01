@@ -535,10 +535,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabToSpawn: {fileID: 3193891800421953404, guid: 429affeafd156e2468d7bd9c2746cf6b, type: 3}
   SpawnMode: 1
-  SpawnDistance: 3
-  DistanceVariation: 1
-  DistanceVariationFrequency: 0
-  PhaseMultiplier: 1
   AlwaysUpdate: 1
+  SpawnDistance: 10
+  PhaseMultiplier: 1
+  DistanceVariation: 0.5
+  DistanceVariationFrequency: 0
   NumToSpawn: 16
   ApproximateSpacing: 1

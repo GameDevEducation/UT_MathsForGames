@@ -53,11 +53,17 @@ public class L1_CircleManager : MonoBehaviour
 
     private void UpdateDisplay()
     {
+        // Sine (aka sin): Sine (Angle) = Opposite / Hypotenuse
+        // Opposite = Sine(Angle) * Hypotensuse
         float orbitX = Mathf.Sin(CurrentAngle * Mathf.Deg2Rad) * OrbitDistance;
+
+        // Cosine (aka cos): Cosine (Angle) = Adjacent / Hypotenuse
+        // Adjacent = Cosine(Angle) * Hypotenuse
         float orbitY = Mathf.Cos(CurrentAngle * Mathf.Deg2Rad) * OrbitDistance;
 
         MovingGO.transform.position = Vector3.up * orbitY + Vector3.right * orbitX;
 
+        HypotenuseGO.transform.localScale = new Vector3(1, OrbitDistance, 1);
         HypotenuseGO.transform.eulerAngles = new Vector3(0, 0, -CurrentAngle);
 
         OppositeGO.transform.localScale = new Vector3(1, orbitY, 1);
